@@ -14,13 +14,13 @@ int main() {
         }
     }
 
-    // Soma dos elementos da coluna 2 (índice 1)
+    // Soma dos elementos da diagonal secundária
     for (i = 0; i < 5; i++) {
-        sum += M[i][1];
+        sum += M[i][4 - i];
     }
 
-    // Apresenta a soma na tela
-    printf("A soma dos elementos da coluna 2 é: %d\n", sum);
+    // Exibição do resultado
+    printf("A soma dos elementos da diagonal secundária é: %d\n", sum);
 
     return 0;
 }

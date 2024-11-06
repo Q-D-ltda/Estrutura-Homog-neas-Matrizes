@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+	int i;
+	int j;
+    int M[4][4];
+    int soma = 0;
+
+    // Leitura da matriz 4x4
+    printf("Digite os elementos da matriz 4x4:\n");
+    for (i = 0; i < 4; i++) {
+        for (j = 0; j < 4; j++) {
+            scanf("%d", &M[i][j]);
+        }
+    }
+
+    // Soma dos elementos marcados com x
+    for (i = 2; i < 4; i++) {
+        for (j = 2; j < 4; j++) {
+            soma += M[i][j];
+        }
+    }
+
+    // Apresenta a soma na tela
+    printf("A soma dos elementos marcados com x é: %d\n", soma);
+
+    return 0;
+}

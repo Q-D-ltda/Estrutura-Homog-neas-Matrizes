@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int M[4][4] = {
+        {0, 10, 8, 20},
+        {10, 0, 25, 30},
+        {8, 25, 0, 12},
+        {20, 30, 12, 0}
+    };
+    
+    int cidade1, cidade2;
+    
+    printf("Digite o código da primeira cidade (0-3): ");
+    scanf("%d", &cidade1);
+    printf("Digite o código da segunda cidade (0-3): ");
+    scanf("%d", &cidade2);
+    
+    if (cidade1 >= 0 && cidade1 < 4 && cidade2 >= 0 && cidade2 < 4) {
+        printf("A distância entre a cidade %d e a cidade %d é de %d km.\n", cidade1, cidade2, M[cidade1][cidade2]);
+    } else {
+        printf("Códigos de cidade inválidos.\n");
+    }
+    
+    return 0;
+}

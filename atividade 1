@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+	int i;
+	int j;
+    int M[2][3];
+    int sum = 0;
+
+    // Alimentando a matriz
+    printf("Digite os elementos da matriz 2x3:\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &M[i][j]);
+            sum += M[i][j];
+        }
+    }
+
+    // Apresentando a soma dos elementos
+    printf("A soma de todos os elementos da matriz é: %d\n", sum);
+
+    return 0;
+}

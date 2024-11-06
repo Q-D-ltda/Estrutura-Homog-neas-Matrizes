@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+	int j;
+	int i;
+    int M[2][3];
+    int num, found = 0;
+
+    // Alimenta a matriz com elementos inteiros
+    printf("Digite os elementos da matriz 2x3:\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Elemento [%d][%d]: ", i, j);
+            scanf("%d", &M[i][j]);
+        }
+    }
+
+    // Lê um número qualquer do teclado
+    printf("Digite um número para buscar na matriz: ");
+    scanf("%d", &num);
+
+    // Procura o número na matriz
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            if (M[i][j] == num) {
+                printf("Número encontrado no índice [%d][%d]\n", i, j);
+                found = 1;
+                break;
+            }
+        }
+        if (found) break;
+    }
+
+    if (!found) {
+        printf("Número não encontrado!\n");
+    }
+
+    return 0;
+}

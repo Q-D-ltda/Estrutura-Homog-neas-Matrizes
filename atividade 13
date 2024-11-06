@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main() {
+	int i;
+	int j;
+    int A[2][3], B[2][3];
+    int temp;
+
+    // Leitura da matriz A
+    printf("Digite os elementos da matriz A (2x3):\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            scanf("%d", &A[i][j]);
+        }
+    }
+
+    // Leitura da matriz B
+    printf("Digite os elementos da matriz B (2x3):\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            scanf("%d", &B[i][j]);
+        }
+    }
+
+    // Troca dos elementos das matrizes
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            temp = A[i][j];
+            A[i][j] = B[i][j];
+            B[i][j] = temp;
+        }
+    }
+
+    // Impressão da matriz A após a troca
+    printf("Matriz A após a troca:\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", A[i][j]);
+        }
+        printf("\n");
+    }
+
+    // Impressão da matriz B após a troca
+    printf("Matriz B após a troca:\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", B[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

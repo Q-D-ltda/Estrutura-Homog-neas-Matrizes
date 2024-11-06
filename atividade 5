@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+	int i;
+	int j;
+    int M[5][5];
+    int sum = 0;
+
+    // Leitura da matriz 5x5
+    printf("Digite os elementos da matriz 5x5:\n");
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            scanf("%d", &M[i][j]);
+        }
+    }
+
+    // Soma dos elementos da coluna 2 (índice 1)
+    for (i = 0; i < 5; i++) {
+        sum += M[i][1];
+    }
+
+    // Apresenta a soma na tela
+    printf("A soma dos elementos da coluna 2 é: %d\n", sum);
+
+    return 0;
+}
